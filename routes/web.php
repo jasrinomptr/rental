@@ -26,7 +26,9 @@ Route::get('/', function() {
     return view('index');
 });
 
-route::get('/mobil',[MobilController::class,'index']);
+Route::get('/mobil',[MobilController::class,'index']);
 Route::get('/mobil/create',[MobilController::class,'create']); //memanggil form
 Route::post('/mobil/simpanData',[MobilController::class,'store']); //menyimpan request ke controller
 Route::get('/merk', [MerkController::class, 'index']);
+Route::get('/merk/create', [MerkController::class, 'create']);
+Route::post('/merk/simpan-data', [MerkController::class, 'store']);
