@@ -1,3 +1,6 @@
+@php
+    $arrayMobil = ['SUV', 'Hatchbag' , 'Sedan', 'MPV'];
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hallo Selamat datang di Laravel</h1>
+    @foreach($arrayMobil as $mobil)
+        <h2>{{ $mobil }}</h2>
+    @endforeach
 </body>
 </html>

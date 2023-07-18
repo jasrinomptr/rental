@@ -2,30 +2,40 @@
     font-family: sans-serif;
 }
 
+table,
+tr,
+td,
+th {
+    border: 1px solid black;
+    border-spacing: 0;
+    border-radius: 0.8px;
+}
+
+th,
+td {
+    padding: 1rem;
+}
+
 body {
-    background-color: antiquewhite;
+    background-color: rgba(27, 179, 22, 0.712);
 }
 
 .card {
-    border:1px solid black;
+    border: 1px solid black;
     max-width: fit-content;
     border-radius: 0.8rem;
     padding: 1rem;
     margin: auto;
-    align-self: center;
-    box-shadow: 0.3rem 0.3rem;
-    background-color: white;
+    justify-content: center;
+    background-color: blue;
+    box-shadow: 1rem 1rem;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-spacing: 0;
+.card :hover {
+    background-color: yellow;
 }
 
 h2 {
     text-align: center;
-}
-
-th, td {
-    padding: 1rem;
+    background-color: white;
 }

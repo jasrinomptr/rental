@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Http\Controllers;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,21 +12,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/welcome', function() {
-    echo "Selamat datang di laravel";
+
+Route::get('/welcome', function () {
+    echo "Selamat datang di Laravel";
 });
 
-Route::get('/greeting', function() {
+Route::get('/greeting', function () {
     return view('greeting');
 });
 
-Route::get('/', function() {
+Route::get('/', function () {
     return view('index');
 });
-
-Route::get('/mobil',[MobilController::class,'index']);
-Route::get('/mobil/create',[MobilController::class,'create']); //memanggil form
-Route::post('/mobil/simpanData',[MobilController::class,'store']); //menyimpan request ke controller
-Route::get('/merk', [MerkController::class, 'index']);
-Route::get('/merk/create', [MerkController::class, 'create']);
-Route::post('/merk/simpan-data', [MerkController::class, 'store']);

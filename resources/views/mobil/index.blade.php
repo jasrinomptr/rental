@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
     <div class="card">
         <h2>Data Mobil</h2>
@@ -19,17 +21,18 @@
                     <th>CC</th>
                 </tr>
             </thead>
+            <tbody>
                 @foreach ($dataMobil as $mobil)
                     <tr>
-                        <td>{{ $loop->iteration}}</td>
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $mobil['namaMobil'] }}</td>
                         <td>{{ $mobil['merkMobil'] }}</td>
                         <td>{{ $mobil['cc'] }}</td>
                     </tr>
-                    @empty
-                        <h3>Data Belom disimpan</h3>
-                @endforelse
+                @endforeach
+            </tbody>
         </table>
     </div>
 </body>
+
 </html>

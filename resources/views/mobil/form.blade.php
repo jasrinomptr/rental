@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
     <div class="card">
         <h2>Form Tambah Mobil</h2>
-        <form action="/mobil/simpanData" method="post">
+        <form action="/mobil/simpanData" method="POST">
             @csrf
             <div class="form-group">
-                <label for="">Nama Mobil</label><br>
+                <label for="nama_mobil">Nama Mobil</label><br>
                 <input type="text" name="nama_mobil" required><br>
             </div>
             <div class="form-group">
-                <label for="">Merk</label><br>
+                <label for="">Merk Mobil</label><br>
                 <input type="text" name="merk_mobil" required><br>
             </div>
             <div class="form-group">
@@ -30,4 +32,5 @@
         </form>
     </div>
 </body>
+
 </html>
